@@ -1,1 +1,10 @@
-<h1>Home Page</h1>
+<form> 
+  <div class="form-group">
+    <label>Task</label>
+    <input type="text" ng-model="newTask.task" >
+      <button ng-click="createTask(newTask)">save</button>
+  </div>
+   <div ng-repeat="task in tasks">
+       <p>Task: {{task.task}}</p>
+   </div>
+</form>
