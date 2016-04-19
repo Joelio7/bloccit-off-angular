@@ -1,0 +1,9 @@
+<div class="container">
+<h1>Completed tasks</h1>
+<div ng-repeat="task in tasks" ng-show="task.completed || isExpired(task)">
+    <h3>{{task.task }}</h3> 
+</div>
+</div>
+<div class="active-tasks">
+<a href="http://localhost:3000/"class="btn-lg btn-success" role="button">view active tasks</a>
+</div>

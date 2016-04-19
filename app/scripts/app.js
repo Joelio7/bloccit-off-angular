@@ -11,6 +11,12 @@
              url: '/',
              controller: 'LandingCtrl as landing',
              templateUrl: '/templates/landing.html'
+         })
+         
+         .state('old-tasks', {
+             url: '/old-tasks',
+             controller: 'LandingCtrl as landing',
+             templateUrl: '/templates/old_tasks.html'
          });
      }
    

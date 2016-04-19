@@ -1,10 +1,15 @@
+<a href="old-tasks" class="btn-xs btn-warning" role="button">old tasks</a>
 <form> 
   <div class="form-group">
-    <label>Task</label>
-    <input type="text" ng-model="newTask.task" >
-      <button ng-click="createTask(newTask)">save</button>
+    <label>Create Task</label>
+    <input type="text" ng-model="newTask.task">
+    <button  ng-click="createTask(newTask)"type="button" class="btn btn-primary">save</button>
   </div>
-   <div ng-repeat="task in tasks">
-       <p>Task: {{task.task}}</p>
-   </div>
 </form>
+<div class="container">
+    <h1>Tasks</h1>
+    <div class="tasks"  ng-repeat="task in tasks" ng-model="task.completed" ng-hide="task.completed || isExpired(task)">
+        <h3>{{task.task }}</h3> 
+        <p>complete <input type="checkbox" ng-model="task.completed" ng-change="updateTask(task)"></p>
+    </div>
+</div>
